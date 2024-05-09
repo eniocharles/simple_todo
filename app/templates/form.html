@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Formulário</title>
+    <style>
+        h1, div{
+            color: white;
+        }
+    </style> 
+</head>
+
+<body style='background-color: #212121'>
+
+    <div class='col-8 m-auto pt-2 pb-2 text-center'>
+        <h1>Cadastro</a>
+    </div>
+
+    <div class='col-8 m-auto pt-2 pb-2 text-center'>
+        <a href='/pedidos' class='btn btn-danger'>Voltar</a>
+    </div>
+
+
+<div class="col-8 m-auto pt-4 pb-2 text-center">
+    <!-- Aki é um algoritmo com passo a passo: se meu action for no direto no db eu uso o update
+    Se não, ou seja se ele vier da area normal pro formulario que seria o create ai ele chama a função create
+    que serve pra adicionar um pedido novo, mas se for pra chamar o forms por um pedido que ja existe ou seja
+    chamar pelo pk, ai ele abre o form como update, bem simples de entender-->
+    <form name="form" id="form" action="{% if db %}{% url 'update' db.id %}{% else %}{% url 'create' %}{% endif %}" method="post">
+        {% csrf_token %}
+        <!--{{form.as_p}}-->
+        <div class="form-group mt-4">Mesa: {{form.mesa}}</div>
+        <div class="form-group mt-4">Pedido: {{form.pedido}}</div>
+        <div class="form-group mt-4">Horário: {{form.horario}}</div>
+        <input type="submit" class="btn btn-danger" value="Salvar">
+    </form>
+</div>
+
+
+</body>
+
+</html>

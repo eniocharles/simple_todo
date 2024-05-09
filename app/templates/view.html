@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Visualização</title>
+    <style>
+        h1, div{
+            color: white;
+        }
+    </style> 
+</head>
+
+<body style='background-color: #212121'>
+
+    <div class='col-8 m-auto pt-2 pb-2 text-center'>
+        <h1>Visualização</a>
+    </div>
+
+    <div class='col-8 m-auto pt-2 pb-2 text-center'>
+        <a href='/pedidos' class='btn btn-danger'>Voltar</a>
+    </div>
+
+    <!-- aki so precisa chamar o db de cada coisa -->
+<div class="col-8 m-auto pt-4 pb-2 text-center"> <br>
+    <strong> Mesa: </strong>{{db.mesa}} <br>
+    <strong> Pedido: </strong>{{db.pedido}} <br>
+    <strong> Horario: </strong>{{db.horario}} <br>
+</div>
+
+
+</body>
+
+</html>
