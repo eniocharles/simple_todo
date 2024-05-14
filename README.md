@@ -8,3 +8,4 @@ Fiz uso do protocolo *HTTP* com um conjunto de métodos de requisição para fun
 adicionar, editar e remover conteúdo dentro de um banco de dados.
 ![Captura de tela 2024-05-12 235326](https://github.com/eniocharles/simple_todo/assets/120492104/0b002169-7563-4fdc-b500-9d725139a609)
 > Imagem da tabela do *crud*.
+___
